@@ -1,7 +1,18 @@
-Hi , good mornig
-
-this is first program
-'
-second commit ready !
-yup
-
+apiVersion: v1
+kind: Config
+clusters:
+- cluster:
+    api-version: v1
+    insecure-skip-tls-verify: true
+    server: "https://10.114.169.230:8080/r/projects/1a7/kubernetes:6443"
+  name: "techspec-env"
+contexts:
+- context:
+    cluster: "techspec-env"
+    user: "techspec-env"
+  name: "techspec-env"
+current-context: "techspec-env"
+users:
+- name: "techspec-env"
+  user:
+    token: "QmFzaWMgTWpjNU1qSkNNemt6UmpVMlFqWTRPREl4TURRNk1XSnZkMUZaU2tKUWRYVnhVWGhoU0VVMVIyZGhRa0p1V0RrMVVHbHpjSEpsVXpkYWFraE9RZz09"
